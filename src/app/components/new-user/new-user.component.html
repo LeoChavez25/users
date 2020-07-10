@@ -1,0 +1,59 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>New user</mat-card-title>
+        </mat-card-header>
+        <form class="new-user-form" [formGroup]="userForm">
+            <mat-card-content>
+                <mat-form-field class="full-width">
+                    <input matInput type="text" placeholder="Name" formControlName="name" [(ngModel)]="name">
+                    <mat-error *ngIf="userForm.controls.name.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.name.hasError('minlength')">
+                        This field must contain at least 4 characters
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.name.hasError('maxlength')">
+                        This field must contain at least 12 characters
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <input matInput type="text" placeholder="Lastname" formControlName="lastname" [(ngModel)]="lastname">
+                    <mat-error *ngIf="userForm.controls.lastname.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.lastname.hasError('minlength')">
+                        This field must contain at least 4 characters
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.lastname.hasError('maxlength')">
+                        This field must contain at least 12 characters
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <input matInput type="text" placeholder="Email" formControlName="email" [(ngModel)]="email">
+                    <mat-error *ngIf="userForm.controls.email.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.email.hasError('email')">
+                        Put a valid email address
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <input matInput type="number" placeholder="Phone" formControlName="phone" [(ngModel)]="phone">
+                    <mat-error *ngIf="userForm.controls.phone.hasError('required')">
+                        This field is required
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.phone.hasError('minlength')">
+                        This field must contain at least 10 characters
+                    </mat-error>
+                    <mat-error *ngIf="userForm.controls.phone.hasError('maxlength')">
+                        This field must contain at least 12 characters
+                    </mat-error>
+                </mat-form-field>
+
+            </mat-card-content>
+            <button mat-stroked-button (click)="addUser()" color="primary" class="btn-block">Add User</button>
+        </form>
+    </mat-card>
+</div>
+<!--(click)="addUser()"-->

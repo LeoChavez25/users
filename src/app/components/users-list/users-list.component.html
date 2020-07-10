@@ -1,0 +1,101 @@
+<!--<div style="margin-top: 10px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *nFor="let user of Users" (click)="EditUser()">
+                <td>{{user.name}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <button type="button" class="btn btn-warning" (click)="EditUser()">Edit</button>
+                <button type="button" class="btn btn-danger" (click)="DeleteUser()">Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel=" stylesheet " type="text/css " href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/datatables.min.css " />
+</head>
+
+<body>
+    <br>
+    <h2 align="center">Users List</h2>
+    <h5 align="center">Page 1 of 1</h5><br>
+    <table class="table"><br>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Lastname
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>Acciones</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>Lopez</td>
+            <td>juan@hotmail.com</td>
+            <td>6311457895</td>
+            <td>
+                <button class="btn btn-warning" (click)="EditUser(user,this)">Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px;" (click)="DeleteUser(user.id)">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Enrique</td>
+            <td>Perez</td>
+            <td>enrique@gmail.com</td>
+            <td>6315478421</td>
+            <td>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Karen</td>
+            <td>Barraza</td>
+            <td>karen@hotmail.com</td>
+            <td>6312540101</td>
+            <td>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Susana</td>
+            <td>Trujillo</td>
+            <td>susana@gmail.com</td>
+            <td>6312559874</td>
+            <td>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
